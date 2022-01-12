@@ -1,0 +1,11 @@
+<div class="pad">
+  <div class="d-flex">
+    <button
+      class="btn"
+      *ngFor="let number of numbers"
+      (click)="onClick.emit(number)"
+    >
+      {{ number }}
+    </button>
+  </div>
+</div>

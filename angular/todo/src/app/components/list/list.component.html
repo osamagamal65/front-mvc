@@ -1,0 +1,16 @@
+<div class="list">
+  <ul class="todo" *ngFor="let todo of service.listObservable$ | async">
+    <li class="block list-tile">
+      <div class="leading">
+        <app-checkbox
+          [checked]="todo.status == 'done'"
+          (onCheck)="toggleItem(todo, $event)"
+        ></app-checkbox>
+      </div>
+      <div class="title">
+        {{ todo.title }}
+      </div>
+      <div class="subtitle d-flex"></div>
+    </li>
+  </ul>
+</div>

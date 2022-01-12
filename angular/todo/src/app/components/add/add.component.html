@@ -1,0 +1,15 @@
+<div class="d-flex flex-flow-column p-2">
+  <input class="input m-2 title-input" [(ngModel)]="newTodo.title" />
+  <input
+    class="input m-2 description-input"
+    [(ngModel)]="newTodo.description"
+  />
+  <input
+    class="input m-2 date-input"
+    type="datetime"
+    [(ngModel)]="newTodo.createDate"
+  />
+  <button class="btn btn-success btn-block add-btn" (click)="addNew()">
+    Add a Todo
+  </button>
+</div>

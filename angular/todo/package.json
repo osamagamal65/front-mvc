@@ -1,5 +1,5 @@
 {
-  "name": "calculator",
+  "name": "todo",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,15 +15,12 @@
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
-    "@angular/localize": "~13.0.0",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
-    "@ng-bootstrap/ng-bootstrap": "^10.0.0",
-    "bootstrap": "^4.5.0",
+    "@babel/core": "^7.16.7",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "wingcss": "^1.0.0-beta",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
