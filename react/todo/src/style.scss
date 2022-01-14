@@ -1,0 +1,259 @@
+:root {
+  --black-color: #0b0c0d;
+  --white-color: #ffffff;
+  --grey-color: #e5e5e5;
+  --dark-grey: #717c7d;
+  --light-grey: #f1f2f4;
+  --green-color: #22c55e;
+  --initial-padding: 8px 16px;
+}
+body {
+  background-color: var(--light-grey);
+  display: block;
+  margin: 0px;
+  width: 100%;
+}
+/* You can add global styles to this file, and also import other style files */
+.container {
+  display: block;
+  width: 80%;
+  height: 100%;
+  background: var(--white-color);
+  margin: auto auto;
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+.btn,
+.input {
+  padding: var(--initial-padding);
+}
+.input {
+  color: var(--dark-grey);
+  border: 1px solid var(--light-grey);
+  border-radius: 2px;
+  box-shadow: none;
+  outline: none;
+  &:focus {
+    border: 1px solid var(--grey-color);
+  }
+  &:hover {
+    border: 1px solid var(--grey-color);
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.btn {
+  padding: var(--initial-padding);
+  box-shadow: none;
+  border: none;
+  height: 32px;
+  color: var(--white-color);
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+  &-success {
+    background-color: var(--green-color);
+  }
+  &-block {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.flex-flow {
+  &-row {
+    flex-flow: row;
+  }
+  &-column {
+    flex-flow: column;
+  }
+}
+.align-items {
+  &-center {
+    align-items: center;
+  }
+  &-start {
+    align-items: flex-start;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-stretch {
+    align-items: stretch;
+  }
+}
+
+.p {
+  &-1 {
+    padding: 2px;
+  }
+  &-2 {
+    padding: 4px;
+  }
+}
+.m {
+  &-0 {
+    margin: 0px;
+  }
+  &-1 {
+    margin: 2px;
+  }
+  &-2 {
+    margin: 4px;
+  }
+  &-3 {
+    margin: 8px;
+  }
+  &-4 {
+    margin: 16px;
+  }
+  &-5 {
+    margin: 32px;
+  }
+
+  &-x-0 {
+    margin: auto 0px;
+  }
+  &-x-1 {
+    margin: auto 2px;
+  }
+  &-x-2 {
+    margin: auto 4px;
+  }
+  &-x-3 {
+    margin: auto 8px;
+  }
+  &-x-4 {
+    margin: auto 16px;
+  }
+  &-x-5 {
+    margin: auto 32px;
+  }
+
+  &-y-0 {
+    margin: 0px auto;
+  }
+  &-y-1 {
+    margin: 2px auto;
+  }
+  &-y-2 {
+    margin: 4px auto;
+  }
+  &-y-3 {
+    margin: 8px auto;
+  }
+  &-y-4 {
+    margin: 16px auto;
+  }
+  &-y-5 {
+    margin: 32px auto;
+  }
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-item {
+  border-bottom: var(--grey-color);
+  padding: 8px;
+  &:nth-last-of-type() {
+    border-bottom: none;
+  }
+}
+
+.flex-end {
+  justify-self: end;
+}
+.flex {
+  &-end {
+    justify-content: flex-end;
+  }
+  &-space-between {
+    justify-content: space-between;
+  }
+  &-space-around {
+    justify-content: space-around;
+  }
+  &-start {
+    justify-content: start;
+  }
+}
